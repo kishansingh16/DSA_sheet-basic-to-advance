@@ -7,22 +7,36 @@ public class Bubble_Sort {
         arr[j]=temp;
     }
 
-    public static void bubbleSort(int arr[]){
-        int n=arr.length;
-        for(int i=0;i<n-1;i++) {
+    public static void bubbleSort(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            boolean swapped = false;
             for (int j = 0; j < n - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     swap(arr, j, j + 1);
+                    swapped = true;
                 }
+
+            }
+            if (swapped == false) {
+                break;
             }
         }
     }
     public static void main(String[] args){
       int arr[]={9,5,3,12,89,0};
+      int arr1[]={1,2,3,4,9};
       bubbleSort(arr);
+
       int n=arr.length;
+
       for(int i=0;i<n;i++) {
-          System.out.print(arr[i] + " ");
+          System.out.println(arr[i] + " ");
       }
+        bubbleSort(arr1);
+        int n1=arr1.length;
+        for(int i=0;i<n1;i++) {
+            System.out.print(arr1[i] + " ");
+        }
     }
 }
