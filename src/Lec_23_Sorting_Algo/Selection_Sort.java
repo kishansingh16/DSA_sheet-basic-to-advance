@@ -17,7 +17,9 @@ public class Selection_Sort {
                     minimum_index=j;
                 }
             }
-            swap(arr,i,minimum_index);
+            if(minimum_index!=i){
+                swap(arr,i,minimum_index);
+            }
         }
     }
     public static void main(String[] args){
